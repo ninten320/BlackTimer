@@ -19,13 +19,15 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var secField: UITextField!
 	@IBOutlet weak var timeLabel: UILabel!
 	
-	let dateFormatter = NSDateFormatter()
-	let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
-	var y = 0
-	var m = 0
-	var d = 0
-	var h = 0
-	var limitTime = NSDate()
+    let dateFormatter = DateFormatter()
+    let calendar = Calendar(identifier: .gregorian)
+	var year = 0
+	var month = 0
+	var day = 0
+	var hour = 23
+    var min = 59
+    var sec = 59
+	var limitTime = Date()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -36,18 +38,26 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
 		minField.delegate = self
 		secField.delegate = self
 		
-		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.locale = Locale(identifier: "ja_JP")
 		dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-		let date = NSDate(timeIntervalSinceNow: 60 * 60)
-		y = calendar.component(.Year, fromDate: date)
-		m = calendar.component(.Month, fromDate: date)
-		d = calendar.component(.Day, fromDate: date)
-		h = calendar.component(.Hour, fromDate: date)
-		yearField.text = "\(y)"
-		monthField.text = "\(m)"
-		dayField.text = "\(d)"
-		if let date = calendar.dateWithEra(1, year: y, month: m, day: d, hour: h, minute: 0, second: 0, nanosecond: 0) {
-			timeLabel.text = dateFormatter.stringFromDate(date)
+		let date = Date(timeIntervalSinceNow: 60 * 60)
+		year = calendar.component(.year, from: date)
+		month = calendar.component(.month, from: date)
+		day = calendar.component(.day, from: date)
+        hour = 23
+        min = 59
+        sec = 59
+        
+		yearField.text = "\(year)"
+		monthField.text = "\(month)"
+		dayField.text = "\(day)"
+        hourField.text = "23"
+        minField.text = "59"
+        secField.text = "59"
+        
+        
+		if let date = calendar.date(from: DateComponents(calendar: calendar, year: year, month: month, day: day, hour: hour, minute: min, second: sec)) {
+            timeLabel.text = dateFormatter.string(from: date)
 			limitTime = date
 		} else {
 			timeLabel.text = "Error"
@@ -58,18 +68,18 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
 		let parent = self.presentingViewController as! ViewController
 		parent.name = nameField.text
 		parent.limitTime = limitTime
-		self.dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true)
 	}
 	
-	func textFieldDidEndEditing(textField: UITextField) {
-		let year = Int(yearField.text!) ?? y
-		let month = Int(monthField.text!) ?? m
-		let day = Int(dayField.text!) ?? d
-		let hour = Int(hourField.text!) ?? 0
-		let min = Int(minField.text!) ?? 0
-		let sec = Int(secField.text!) ?? 0
-		if let date = calendar.dateWithEra(1, year: year, month: month, day: day, hour: hour, minute: min, second: sec, nanosecond: 0) {
-			timeLabel.text = dateFormatter.stringFromDate(date)
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		let year = Int(yearField.text!) ?? self.year
+		let month = Int(monthField.text!) ?? self.month
+		let day = Int(dayField.text!) ?? self.day
+		let hour = Int(hourField.text!) ?? 23
+		let min = Int(minField.text!) ?? 59
+		let sec = Int(secField.text!) ?? 59
+        if let date = calendar.date(from: DateComponents(calendar: calendar, year: year, month: month, day: day, hour: hour, minute: min, second: sec)) {
+            timeLabel.text = dateFormatter.string(from: date)
 			limitTime = date
 		} else {
 			timeLabel.text = "Error"

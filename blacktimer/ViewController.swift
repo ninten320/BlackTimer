@@ -17,21 +17,21 @@ class ViewController: UIViewController {
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var umaruImage: UIImageView!
 	
-	let dateFormatter = NSDateFormatter()
+	let dateFormatter = DateFormatter()
 	let random = GKRandomDistribution(randomSource: GKARC4RandomSource(), lowestValue: 1, highestValue: 6)
 	
-	var timer: NSTimer!
+	var timer: Timer!
 	var imageCount = 0
 	
-	var currentTime = NSDate() {
-		didSet(newValue) {
-			timeLabel.text = "Time: " + dateFormatter.stringFromDate(newValue)
+	var currentTime = Date() {
+		didSet {
+            timeLabel.text = "Time: " + dateFormatter.string(from: currentTime)
 		}
 	}
 	
-	var limitTime = NSDate() {
-		didSet(newValue) {
-			limitLabel.text = "Limit: " + dateFormatter.stringFromDate(newValue)
+	var limitTime = Date() {
+		didSet {
+            limitLabel.text = "Limit: " + dateFormatter.string(from: limitTime)
 		}
 	}
 	
@@ -45,17 +45,19 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+		dateFormatter.locale = Locale(identifier: "ja_JP")
 		dateFormatter.dateFormat = "MM-dd HH:mm:ss"
-		currentTime = NSDate()
-		limitTime = NSDate()
+		currentTime = Date()
+		limitTime = Date()
 		name = ""
-		timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerEvent", userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .commonModes)
 	}
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 		timerLabel.text = ""
-		limitTime = NSDate(timeInterval: 0, sinceDate: limitTime)
+        limitTime = Date(timeInterval: 0, since: limitTime)
 		imageCount = 0
 	}
 
@@ -65,18 +67,18 @@ class ViewController: UIViewController {
 	}
 	
 	func timerEvent() {
-		imageCount++
+		imageCount += 1
 		if imageCount % 5 == 0 {
 			umaruImage.image = UIImage(named: "umaru\(random.nextInt())")
 		}
-		currentTime = NSDate()
-		var sec = Int(round(limitTime.timeIntervalSinceDate(currentTime)))
+		currentTime = Date()
+        var sec = Int(ceil(limitTime.timeIntervalSince(currentTime)))
 		var str = ""
 		if sec < 0 {
 			sec *= -1
-			timerLabel.textColor = UIColor.redColor()
+            timerLabel.textColor = .red
 		} else {
-			timerLabel.textColor = UIColor.cyanColor()
+            timerLabel.textColor = .cyan
 		}
 		let day = Int(sec / (24 * 60 * 60))
 		sec -= day * 24 * 60 * 60
@@ -99,6 +101,5 @@ class ViewController: UIViewController {
 		str += "\(sec)"
 		timerLabel.text = str
 	}
-	
 }
 
