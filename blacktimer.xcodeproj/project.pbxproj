@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D893ACD1C7EE7BA00FE2500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D893ACC1C7EE7BA00FE2500 /* AppDelegate.swift */; };
+		3D893ACF1C7EE7BA00FE2500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D893ACE1C7EE7BA00FE2500 /* ViewController.swift */; };
+		3D893AD21C7EE7BA00FE2500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D893AD01C7EE7BA00FE2500 /* Main.storyboard */; };
+		3D893AD41C7EE7BA00FE2500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D893AD31C7EE7BA00FE2500 /* Assets.xcassets */; };
+		3DB362DF1C97159F0062FA5F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB362DE1C97159F0062FA5F /* SettingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D893AC91C7EE7BA00FE2500 /* blacktimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blacktimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D893ACC1C7EE7BA00FE2500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D893ACE1C7EE7BA00FE2500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D893AD11C7EE7BA00FE2500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D893AD31C7EE7BA00FE2500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D893AD51C7EE7BA00FE2500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB362DE1C97159F0062FA5F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D893AC61C7EE7BA00FE2500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D893AC01C7EE7BA00FE2500 = {
+			isa = PBXGroup;
+			children = (
+				3D893ACA1C7EE7BA00FE2500 /* Products */,
+				3D893ACB1C7EE7BA00FE2500 /* blacktimer */,
+			);
+			sourceTree = "<group>";
+		};
+		3D893ACA1C7EE7BA00FE2500 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D893AC91C7EE7BA00FE2500 /* blacktimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D893ACB1C7EE7BA00FE2500 /* blacktimer */ = {
+			isa = PBXGroup;
+			children = (
+				3D893ACC1C7EE7BA00FE2500 /* AppDelegate.swift */,
+				3D893AD31C7EE7BA00FE2500 /* Assets.xcassets */,
+				3D893AD51C7EE7BA00FE2500 /* Info.plist */,
+				3D893AD01C7EE7BA00FE2500 /* Main.storyboard */,
+				3DB362DE1C97159F0062FA5F /* SettingViewController.swift */,
+				3D893ACE1C7EE7BA00FE2500 /* ViewController.swift */,
+			);
+			name = blacktimer;
+			path = blacktimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D893AC81C7EE7BA00FE2500 /* blacktimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D893AD81C7EE7BA00FE2500 /* Build configuration list for PBXNativeTarget "blacktimer" */;
+			buildPhases = (
+				3D893AC51C7EE7BA00FE2500 /* Sources */,
+				3D893AC61C7EE7BA00FE2500 /* Frameworks */,
+				3D893AC71C7EE7BA00FE2500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = blacktimer;
+			productName = tvOSTest;
+			productReference = 3D893AC91C7EE7BA00FE2500 /* blacktimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D893AC11C7EE7BA00FE2500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "CPS Lab";
+				TargetAttributes = {
+					3D893AC81C7EE7BA00FE2500 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 79N3F89EVZ;
+						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.appletvos = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3D893AC41C7EE7BA00FE2500 /* Build configuration list for PBXProject "blacktimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D893AC01C7EE7BA00FE2500;
+			productRefGroup = 3D893ACA1C7EE7BA00FE2500 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D893AC81C7EE7BA00FE2500 /* blacktimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D893AC71C7EE7BA00FE2500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D893AD41C7EE7BA00FE2500 /* Assets.xcassets in Resources */,
+				3D893AD21C7EE7BA00FE2500 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D893AC51C7EE7BA00FE2500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D893ACF1C7EE7BA00FE2500 /* ViewController.swift in Sources */,
+				3D893ACD1C7EE7BA00FE2500 /* AppDelegate.swift in Sources */,
+				3DB362DF1C97159F0062FA5F /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D893AD01C7EE7BA00FE2500 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D893AD11C7EE7BA00FE2500 /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D893AD61C7EE7BA00FE2500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		3D893AD71C7EE7BA00FE2500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D893AD91C7EE7BA00FE2500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = blacktimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.dendai.im.cps.blacktimer;
+				PRODUCT_NAME = blacktimer;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3D893ADA1C7EE7BA00FE2500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = blacktimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.ac.dendai.im.cps.blacktimer;
+				PRODUCT_NAME = blacktimer;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D893AC41C7EE7BA00FE2500 /* Build configuration list for PBXProject "blacktimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D893AD61C7EE7BA00FE2500 /* Debug */,
+				3D893AD71C7EE7BA00FE2500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D893AD81C7EE7BA00FE2500 /* Build configuration list for PBXNativeTarget "blacktimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D893AD91C7EE7BA00FE2500 /* Debug */,
+				3D893ADA1C7EE7BA00FE2500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D893AC11C7EE7BA00FE2500 /* Project object */;
+}
